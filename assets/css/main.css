@@ -624,7 +624,8 @@ body {
     top: -5px;
     color: #fff;
     font-size: 6px;
-    cursor: pointer
+    cursor: pointer;
+    font-family: FontAwesome;
 }
 
 .side-nav>li span {
@@ -635,7 +636,8 @@ body {
     font-size: 14px;
     font-weight: 300;
     opacity: 0;
-    visibility: hidden
+    visibility: hidden;
+    font-family: 'Montserrat';
 }
 
 .side-nav>li::before {
@@ -648,23 +650,23 @@ body {
 }
 
 .side-nav li:nth-child(1)::before {
-    content: "01"
+    content: "\f015"
 }
 
 .side-nav li:nth-child(2)::before {
-    content: "02"
+    content: "\f0e7"
 }
 
 .side-nav li:nth-child(3)::before {
-    content: "03"
+    content: "\f121"
 }
 
 .side-nav li:nth-child(4)::before {
-    content: "04"
+    content: "\f095"
 }
 
 .side-nav li:nth-child(5)::before {
-    content: "05"
+    content: "\f00c"
 }
 
 .side-nav li.is-active {
@@ -806,9 +808,18 @@ body {
 .intro--options>a {
     max-width: 250px;
     text-decoration: none;
-    color: #282828;
+    color: #888888;
+    padding: 0 10px;
     -webkit-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out
+    transition: color .2s ease-in-out;
+}
+
+.intro--options>a:first-child {
+  padding-left: 0
+}
+
+.intro--options>a:last-child {
+  padding-right: 0
 }
 
 .intro--options>a:hover {
@@ -957,7 +968,8 @@ body {
     margin-top: 10px;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase
+    text-transform: uppercase;
+    background-color: #0c0c0c
 }
 
 .work--lockup .slider--item-description {
@@ -965,6 +977,75 @@ body {
     max-width: 250px;
     margin: 0 auto
 }
+
+.work--lockup .slider--nivel {
+  text-align: center;
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work--lockup .slider--nivel span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #858588;
+    margin: 0 2px;
+    display: none
+}
+
+.work--lockup .slider--item-center .slider--nivel span {
+    display: block;
+}
+
+.work--lockup .slider--nivel.n-1 span:nth-child(1),
+.work--lockup .slider--nivel.n-2 span:nth-child(1),
+.work--lockup .slider--nivel.n-2 span:nth-child(2),
+.work--lockup .slider--nivel.n-3 span:nth-child(1),
+.work--lockup .slider--nivel.n-3 span:nth-child(2),
+.work--lockup .slider--nivel.n-3 span:nth-child(3),
+.work--lockup .slider--nivel.n-4 span:nth-child(1),
+.work--lockup .slider--nivel.n-4 span:nth-child(2),
+.work--lockup .slider--nivel.n-4 span:nth-child(3),
+.work--lockup .slider--nivel.n-4 span:nth-child(4),
+.work--lockup .slider--nivel.n-5 span:nth-child(1),
+.work--lockup .slider--nivel.n-5 span:nth-child(2),
+.work--lockup .slider--nivel.n-5 span:nth-child(3),
+.work--lockup .slider--nivel.n-5 span:nth-child(4),
+.work--lockup .slider--nivel.n-5 span:nth-child(5),
+.work--lockup .slider--nivel.n-6 span:nth-child(1),
+.work--lockup .slider--nivel.n-6 span:nth-child(2),
+.work--lockup .slider--nivel.n-6 span:nth-child(3),
+.work--lockup .slider--nivel.n-6 span:nth-child(4),
+.work--lockup .slider--nivel.n-6 span:nth-child(5),
+.work--lockup .slider--nivel.n-6 span:nth-child(6),
+.work--lockup .slider--nivel.n-7 span:nth-child(1),
+.work--lockup .slider--nivel.n-7 span:nth-child(2),
+.work--lockup .slider--nivel.n-7 span:nth-child(3),
+.work--lockup .slider--nivel.n-7 span:nth-child(4),
+.work--lockup .slider--nivel.n-7 span:nth-child(5),
+.work--lockup .slider--nivel.n-7 span:nth-child(6),
+.work--lockup .slider--nivel.n-7 span:nth-child(7),
+.work--lockup .slider--nivel.n-8 span:nth-child(1),
+.work--lockup .slider--nivel.n-8 span:nth-child(2),
+.work--lockup .slider--nivel.n-8 span:nth-child(3),
+.work--lockup .slider--nivel.n-8 span:nth-child(4),
+.work--lockup .slider--nivel.n-8 span:nth-child(5),
+.work--lockup .slider--nivel.n-8 span:nth-child(6),
+.work--lockup .slider--nivel.n-8 span:nth-child(7),
+.work--lockup .slider--nivel.n-8 span:nth-child(8),
+.work--lockup .slider--nivel.n-9 span:nth-child(1),
+.work--lockup .slider--nivel.n-9 span:nth-child(2),
+.work--lockup .slider--nivel.n-9 span:nth-child(3),
+.work--lockup .slider--nivel.n-9 span:nth-child(4),
+.work--lockup .slider--nivel.n-9 span:nth-child(5),
+.work--lockup .slider--nivel.n-9 span:nth-child(6),
+.work--lockup .slider--nivel.n-9 span:nth-child(7),
+.work--lockup .slider--nivel.n-9 span:nth-child(8),
+.work--lockup .slider--nivel.n-9 span:nth-child(9),
+.work--lockup .slider--nivel.n-10 span {background-color: #0f33ff; border-color:#0f33ff}
 
 .work--lockup .slider--item-image {
   width: 150px;
@@ -1106,22 +1187,9 @@ body {
 
 .about {
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     width: 900px;
     max-width: 75%;
     height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     margin: 0 auto
 }
 
@@ -1219,15 +1287,7 @@ body {
 }
 
 .about--options {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 600px;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+
     margin: 0;
     padding: 0;
     list-style: none
@@ -1235,8 +1295,6 @@ body {
 
 .about--options>a {
     position: relative;
-    width: 150px;
-    height: 75px;
     text-decoration: none;
     color: #fff;
     border: 10px solid #0f33ff;
@@ -1357,9 +1415,9 @@ body {
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
+    -webkit-justify-content: center;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0 auto
 }
 
