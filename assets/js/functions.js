@@ -1,5 +1,3 @@
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
-
 $( document ).ready(function() {
 
   // DOMMouseScroll included for firefox support
@@ -53,13 +51,17 @@ $( document ).ready(function() {
 
   $('.cta').click(function(){
 
-    var curActive = $('.side-nav').find('.is-active'),
-        curPos = $('.side-nav').children().index(curActive),
-        lastItem = $('.side-nav').children().length - 1,
-        nextPos = lastItem;
+    // var curActive = $('.side-nav').find('.is-active'),
+    //     curPos = $('.side-nav').children().index(curActive),
+    //     lastItem = $('.side-nav').children().length - 1,
+    //     nextPos = lastItem;
+    //
+    // updateNavs(lastItem);
+    // updateContent(curPos, nextPos, lastItem);
+    //
+    //
 
-    updateNavs(lastItem);
-    updateContent(curPos, nextPos, lastItem);
+    // openModelContact();
 
   });
 
@@ -255,7 +257,7 @@ $( document ).ready(function() {
 
   function transitionLabels() {
 
-    $('.work-request--information input').focusout(function(){
+    $('input, textarea').focusout(function(){
 
       var textVal = $(this).val();
 
@@ -271,6 +273,29 @@ $( document ).ready(function() {
 
     });
 
+  }
+
+
+  // modal contact animation
+  $('.open-modal').click(function(){
+    openModalContact();
+  });
+  $('.close-modal').click(function(){
+    closeModalContact();
+  });
+
+  function openModalContact() {
+    $('.hire').css({
+      'top': 0,
+      'opacity': 1
+    });
+  }
+
+  function closeModalContact() {
+    $('.hire').css({
+      'top': '100%',
+      'opacity': 0
+    });
   }
 
   outerNav();

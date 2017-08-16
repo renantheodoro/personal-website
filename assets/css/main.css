@@ -546,7 +546,8 @@ body {
     position: relative;
     width: 16px;
     height: 2px;
-    background-color: #fff
+    background-color: #fff;
+    transition: ease .5s
 }
 
 .header--nav-toggle::before {
@@ -557,6 +558,15 @@ body {
 .header--nav-toggle::after {
     top: 5px;
     width: 23px
+}
+
+.header--nav-toggle:hover span {
+  width: 23px;
+}
+
+.header--nav-toggle:hover::before,
+.header--nav-toggle:hover::after {
+  width: 16px;
 }
 
 .header--cta {
@@ -576,18 +586,23 @@ body {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .4s ease-in-out, visibility 0s .4s;
-    transition: opacity .4s ease-in-out, visibility 0s .4s
+    transition: opacity .4s ease-in-out, visibility 0s .4s;
+    transition: all .5s
 }
 
 .header--cta:focus {
     outline: none
 }
 
+.header--cta:hover {
+  background-color: #0723c5
+}
+
 .header--cta.is-active {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity .4s ease-in-out .4s;
-    transition: opacity .4s ease-in-out .4s
+    /*-webkit-transition: opacity .4s ease-in-out .4s;
+    transition: opacity .4s ease-in-out .4s*/
 }
 
 @media (max-width: 767px) {
@@ -729,7 +744,7 @@ body {
     background-color: #282828
 }
 
-.intro--banner::after {
+/*.intro--banner::after {
     content: "";
     position: absolute;
     bottom: 18px;
@@ -737,7 +752,7 @@ body {
     width: 30px;
     height: 4px;
     background-color: #0f33ff
-}
+}*/
 
 .intro--banner h1 {
     position: relative;
@@ -759,17 +774,20 @@ body {
 .intro--banner button .btn-background {
     position: absolute;
     top: 0;
-    left: 23px;
+    /*left: 23px;*/
+    left: 0;
     right: 0;
     height: 100%;
     background-color: #0f33ff;
     z-index: -1;
     -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out
+    transition: left .2s ease-in-out;
+    transition: all .5s
 }
 
 .intro--banner button:hover .btn-background {
-    left: 0
+    left: 0;
+    background-color: #0723c5;
 }
 
 .intro--banner button:focus {
@@ -778,9 +796,14 @@ body {
 
 .intro--banner button svg {
     position: relative;
-    left: 5px;
+    left: 2px;
     width: 15px;
-    fill: #fff
+    fill: #fff;
+    transition: ease .5s
+}
+
+.intro--banner button:hover svg {
+  left: 7px;
 }
 
 .intro--banner img {
@@ -800,12 +823,13 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
     list-style: none
 }
 
-.intro--options>a {
+.intro--options > .item-options {
     max-width: 250px;
     text-decoration: none;
     color: #888888;
@@ -814,21 +838,29 @@ body {
     transition: color .2s ease-in-out;
 }
 
-.intro--options>a:first-child {
+.intro--options > .item-options:first-child {
   padding-left: 0
 }
 
-.intro--options>a:last-child {
+.intro--options > .item-options:last-child {
   padding-right: 0
 }
 
-.intro--options>a:hover {
+.intro--options > .item-options:hover {
     color: #fff
 }
 
 .intro--options h3 {
+    display: flex;
+    align-items: center;
     font-size: 16px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-top: 0
+}
+
+.intro--options h3 i {
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 .intro--options p {
@@ -845,10 +877,10 @@ body {
     .intro--banner img {
         width: 430px
     }
-    .intro--options>a {
+    .intro--options > .item-options {
         margin-right: 30px
     }
-    .intro--options>a:last-child {
+    .intro--options > .item-options:last-child {
         margin-right: 0
     }
 }
@@ -866,12 +898,12 @@ body {
     .intro--options {
         display: block
     }
-    .intro--options>a {
+    .intro--options > .item-options {
         display: block;
         max-width: 100%;
         margin: 0 0 30px 0
     }
-    .intro--options>a:last-child {
+    .intro--options > .item-options:last-child {
         margin-bottom: 0
     }
 }
@@ -956,7 +988,7 @@ body {
 .work--lockup .slider--item {
     position: absolute;
     display: none;
-    text-align: center
+    text-align: center;
 }
 
 .work--lockup .slider--item a {
@@ -1059,7 +1091,12 @@ body {
 }
 
 .work--lockup .slider--item-image img {
-    width: 100%
+    width: 100%;
+    transition: all 1s
+}
+
+.slider--item:hover img {
+  transform: scale(1.1);
 }
 
 .work--lockup .slider--item-left {
@@ -1125,8 +1162,15 @@ body {
     justify-content: center;
     background-color: #282828;
     border-radius: 50%;
-    cursor: pointer
+    cursor: pointer;
+    transition: ease .5s
 }
+
+.work--lockup .slider--next:hover,
+.work--lockup .slider--prev:hover {
+  transform: scale(1.1);
+}
+
 
 .work--lockup .slider--next svg,
 .work--lockup .slider--prev svg {
@@ -1287,32 +1331,58 @@ body {
 }
 
 .about--options {
-
+    height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10% 0;
     list-style: none
 }
 
-.about--options>a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    border: 10px solid #0f33ff;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat
+.about--options h2 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  text-align: center;
 }
 
-.about--options>a:nth-child(1) {
-    background-image: url("../img/about-winners.jpg")
+.about--options>a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  border: 10px solid #0f33ff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc(33% - 24px);
+  height: 30%;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 30px;
 }
 
 .about--options>a:nth-child(2) {
-    background-image: url("../img/about-philosophy.jpg")
+    background-image: url("../img/about-winners.jpg")
 }
 
 .about--options>a:nth-child(3) {
-    background-image: url("../img/about-history.jpg")
+    background-image: url("../img/about-philosophy.jpg")
+}
+
+.about--options>a:nth-child(4) {
+    background-image: url("../img/about-history.jpg");
+    margin-right: 0
+}
+
+.about--options>a:nth-child(5) {
+    background-image: url("../img/about-history.jpg");
+}
+
+.about--options>a:nth-child(6) {
+    background-image: url("../img/about-history.jpg");
+}
+
+.about--options>a:nth-child(7) {
+    background-image: url("../img/about-history.jpg");
+    margin-right: 0
 }
 
 .about--options>a:hover h3 {
@@ -1491,13 +1561,16 @@ body {
 }
 
 .hire {
-    position: relative;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 700px;
-    max-width: 75%;
+    /*width: 700px;*/
+    /*max-width: 75%;*/
     height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1508,7 +1581,54 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0 auto
+    margin: 0 auto;
+    z-index: 99;
+    background-color: #0c0c0c;
+    transition: all 1s;
+    opacity: 0
+}
+
+.close-modal {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-modal::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  transform: translate(10px,0px) rotate(45deg)
+}
+
+.close-modal::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  transform: translate(-10px,0px) rotate(-45deg)
+}
+
+.close-modal::before,
+.close-modal::after {
+  transition: ease .5s
+}
+
+.close-modal:hover::before {
+  transform: translate(10px,0px) rotate(-45deg)
+}
+
+.close-modal:hover::after {
+  transform: translate(-10px,0px) rotate(45deg)
 }
 
 @media (max-width: 1180px) {
@@ -1541,16 +1661,22 @@ body {
     color: #fff
 }
 
-.work-request input[type="submit"] {
-    width: 400px;
-    max-width: 100%;
+.work-request input,
+.work-request textarea {
+    width: 100%;
+    max-width: 400px;
     line-height: 50px;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     background-color: #0f33ff;
     border: none;
-    border-radius: 0
+    border-radius: 0;
+    transition: all .5s
+}
+
+.work-request input:hover {
+    background-color: #0723c5
 }
 
 .work-request input[type="submit"]:focus {
@@ -1647,32 +1773,36 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 60px
 }
 
-.work-request--information .information-name,
-.work-request--information .information-email {
+.work-request--information .information {
     position: relative;
-    width: 45%;
+    width: 100%;
+    max-width: 400px;
     height: 50px;
     font-size: 30px;
-    font-weight: 300
+    font-weight: 300;
+    margin: 0 auto 30px
 }
 
-.work-request--information input[type="text"],
-.work-request--information input[type="email"] {
+.work-request--information .information input,
+.work-request--information .information textarea {
     width: 100%;
     padding: 0 0 5px 0;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
-    border-radius: 0
+    border-radius: 0;
+    transition: all .5s
 }
 
-.work-request--information input[type="text"]:focus,
-.work-request--information input[type="email"]:focus {
+.work-request--information input:focus,
+.work-request--information textarea:focus {
     outline: none;
-    background-color: #0c0c0c
+    background-color: #0c0c0c;
+    border-color: #0f33ff
 }
 
 .work-request--information label {
@@ -1681,13 +1811,16 @@ body {
     left: 0;
     pointer-events: none;
     -webkit-transition: top .2s ease-in-out, font-size .2s ease-in-out;
-    transition: top .2s ease-in-out, font-size .2s ease-in-out
+    transition: top .2s ease-in-out, font-size .2s ease-in-out;
 }
 
 .work-request--information input:focus+label,
-.work-request--information input.has-value+label {
+.work-request--information input.has-value+label,
+.work-request--information textarea:focus+label,
+.work-request--information textarea.has-value+label {
     top: -15px;
-    font-size: 14px
+    font-size: 14px;
+    color: #0f33ff
 }
 
 @media (max-width: 767px) {
