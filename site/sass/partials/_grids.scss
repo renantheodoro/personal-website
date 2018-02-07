@@ -1,0 +1,97 @@
+$grid: "grid-";
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 1239px) {
+    width: 90%;
+  }
+
+}
+
+.row {
+  width: 100%;
+  display: table;
+  margin: {
+    left: -15px;
+    right: -15px;
+    // bottom: 20px;
+  }
+}
+
+@mixin grid {
+  padding: 0 15px;
+  margin-left: auto;
+  float: left;
+  min-height: 1px;
+
+  &:first-child {
+    padding-left: 0
+  }
+
+  &:last-child {
+    padding-right: 0
+  }
+}
+
+.#{$grid}1 {
+  width: 8.33333333%;
+  @include grid;
+}
+
+.#{$grid}2 {
+  width: 16.6666667%;
+  @include grid;
+}
+
+.#{$grid}3 {
+  width: 25%;
+  @include grid;
+}
+
+.#{$grid}4 {
+  width: 33.3333333%;
+  @include grid;
+}
+
+.#{$grid}5 {
+  width: 41.6666666%;
+  @include grid;
+}
+
+.#{$grid}6 {
+  width: 50%;
+  @include grid;
+}
+
+.#{$grid}7 {
+  width: 58.3333333%;
+  @include grid;
+}
+
+.#{$grid}8 {
+  width: 66.6666666%;
+  @include grid;
+}
+
+.#{$grid}9 {
+  width: 74.9999999%;
+  @include grid;
+}
+
+.#{$grid}10 {
+  width: 83.3333332%;
+  @include grid;
+}
+
+.#{$grid}11 {
+  width: 91.6666665%;
+  @include grid;
+}
+
+.#{$grid}12 {
+  width: 100%;
+  @include grid;
+}

@@ -1,0 +1,51 @@
+/*
+
+Comentário compilado: /*
+Comentário não compilado: //
+=============================
+Referência ao seletor pai: &
+=============================
+Interpolação: #{}
+=============================
+Variável: $
+=============================
+Namespace:
+propriedade: {
+  tipo: valor;
+}
+=============================
+Mixin:
+@mixin nome {
+  propriedade: valor;
+}
+
+#elemento {
+  @include nome;
+}
+
+ou
+
+@mixin nome {
+  .elemento {
+    ......
+  }
+
+  $variavel: valor;
+
+  [qualquer coisa que se queira importar]
+}
+
+@include nome;
+==============================
+Herança:
+.elemento-pai {
+  propriedade: valor;
+}
+
+.elemento-filho {
+  @extend .elemento-pai;
+}
+
+Placeholder: %
+
+*/
