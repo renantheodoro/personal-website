@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Renan Theodoro | Front-End Developer</title>
 
@@ -23,7 +23,7 @@
       </video>
       <div class="container">
         <div class="row">
-          <div class="grid-5"></div>
+          <div class="grid-5 grid-empty"></div>
           <div class="grid-5">
             <div id="banner-content">
               <h1>
@@ -33,7 +33,7 @@
               <a href="mailto:contato@renantheodoro.com" class="btn-action">contratar</a>
             </div>
           </div>
-          <div class="grid-2"></div>
+          <div class="grid-2 grid-empty"></div>
         </div>
       </div>
     </section>
@@ -43,7 +43,7 @@
          <div class="row">
           <div class="grid-6">
             <h2 class="section_title txt-blue b-yellow">Sobre mim</h2>
-            <p>Atuo como Desenvolvedor Front-End desde 2015 e já passei por 3 agências. Sou formado em Sistemas para Internet pela FIAP e me dou bem com <strong>HTML5, CSS3, SASS, JQuery e Javascript</strong>. Neste momento tenho me dedicado para desenvolver meus conhecimentos em <strong>Angular e Node.js</strong>. Além disso, também já tive muito contato com <strong>Wordpress</strong>.</p>
+            <p>Atuo como Desenvolvedor Front-End desde 2015 e já passei por 3 agências. Sou formado em Sistemas para Internet pela FIAP e meus fortes são <strong>HTML5, CSS3, SASS e Javascript</strong>. Neste momento tenho me dedicado para desenvolver meus conhecimentos em <strong>Angular e Nodejs</strong>. Além disso, também já tive muito contato com <strong>Wordpress</strong>.</p>
             <ul id="details">
               <li><strong>Nome:</strong> Renan Barbosa Theodoro</li>
               <li><strong>Idade:</strong> 21 anos</li>
@@ -52,7 +52,9 @@
             </ul>
           </div>
           <div class="grid-6">
-            <img src="images/me.jpg" title="Renan Theodoro" alt="Renan Theodoro Front-End Developer" id="person">
+            <div id="person">
+              <img src="images/me.jpg" title="Renan Theodoro" alt="Renan Theodoro Front-End Developer">
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +151,7 @@
 
             <div class="item-skill">
               <span class="skill-title txt-white">JavaScript</span>
-              <div class="level level-70">
+              <div class="level level-80">
                 <div class="bar">
                   <div class="bar-filled"></div>
                 </div>
@@ -158,7 +160,7 @@
 
             <div class="item-skill">
               <span class="skill-title txt-white">Node.js</span>
-              <div class="level level-20">
+              <div class="level level-30">
                 <div class="bar">
                   <div class="bar-filled"></div>
                 </div>
@@ -186,7 +188,7 @@
 
             <div class="item-skill">
               <span class="skill-title txt-white">Wordpress</span>
-              <div class="level level-80">
+              <div class="level level-70">
                 <div class="bar">
                   <div class="bar-filled"></div>
                 </div>
@@ -196,7 +198,7 @@
           <div class="grid-4">
             <div class="item-skill">
               <span class="skill-title txt-white">SASS</span>
-              <div class="level level-80">
+              <div class="level level-90">
                 <div class="bar">
                   <div class="bar-filled"></div>
                 </div>
@@ -205,7 +207,7 @@
 
             <div class="item-skill">
               <span class="skill-title txt-white">Angular</span>
-              <div class="level level-20">
+              <div class="level level-50">
                 <div class="bar">
                   <div class="bar-filled"></div>
                 </div>
@@ -232,40 +234,42 @@
         </div>
         <div class="row">
           <div class="grid-4">
-            <a target="_blank" href="http://escoladireta.com.br/" class="port_box">
+            <div class="port_box">
               <div class="img">
                 <img src="images/thumb-escola_direta.jpg">
               </div>
               <div class="port_box-content">
                 <h3>Escola Direta</h3>
-                <p>Site desenvolvido em HTML5, CSS3, JQuery, Materialize e Wordpress.</p>
-                <span href="#">Ver Projeto</span>
+                <p>Site desenvolvido em <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>JQuery</strong>, <strong>Materialize</strong> e <strong>Wordpress</strong>.</p>
+                <a target="_blank" href="http://escoladireta.com.br/" class="first-icon"><i class="fas fa-tv"></i> Site</a>
+                <a target="_blank" href="http://github.com/renantheodoro/escoladireta"><i class="fab fa-github"></i> Github</a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="grid-4">
-            <a target="_blank" href="http://appboats.com/" class="port_box">
-              <div class="img">
-                <img src="images/thumb-appboats.jpg">
-              </div>
-              <div class="port_box-content">
-                <h3>AppBoats</h3>
-                <p>Site desenvolvido em HTML5, CSS3, JQuery, Materialize e Wordpress.</p>
-                <span href="#">Ver Projeto</span>
-              </div>
-            </a>
-          </div>
-          <div class="grid-4">
-            <a target="_blank" href="http://incipit.com.br/" class="port_box">
+            <div class="port_box">
               <div class="img">
                 <img src="images/thumb-incipit.jpg">
               </div>
               <div class="port_box-content">
                 <h3>Incipit</h3>
-                <p>Site desenvolvido em HTML5, CSS3, JQuery.</p>
-                <span href="#">Ver Projeto</span>
+                <p>Site desenvolvido em <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JQuery</strong>.</p>
+                <a target="_blank" href="http://incipit.com.br/" class="first-icon"><i class="fas fa-tv"></i> Site</a>
+                <a target="_blank" href="https://github.com/renantheodoro/incipit"><i class="fab fa-github"></i> Github</a>
               </div>
-            </a>
+            </div>
+          </div>
+          <div class="grid-4">
+            <div class="port_box">
+              <div class="img">
+                <img src="images/thumb-multi_talentos.jpg">
+              </div>
+              <div class="port_box-content">
+                <h3>Multi Talentos</h3>
+                <p>Projeto desenvolvido em <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>Angular</strong>.</p>
+                <a target="_blank" href="https://github.com/renantheodoro/multi-talentos"><i class="fab fa-github"></i> Github</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -314,7 +318,7 @@
               <a target="_blank" href="http://instagram.com/orenantheodoro/">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a target="_blank" href="http://facebook.com/nanertheodoro/">
+              <a target="_blank" href="http://facebook.com/orenantheodoro/">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </div>

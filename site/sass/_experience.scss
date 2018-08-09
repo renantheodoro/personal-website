@@ -57,6 +57,7 @@
             background-color: $white;
             transition: ease .8s;
             z-index: 1;
+
           }
 
         }
@@ -73,6 +74,10 @@
         }
 
         &.no-line::after {
+          display: none;
+        }
+
+        @media(max-width: 479px) {
           display: none;
         }
 
@@ -143,6 +148,11 @@
           top: 20px;
           left: -25px;
         }
+
+        @media(max-width: 479px) {
+          width: 100%;
+          margin-left: 0
+        }
       }
 
       &:first-child {
@@ -156,6 +166,10 @@
           top: 0;
           height: 20px;
         }
+      }
+
+      @media(max-width: 859px) {
+        width: 100%
       }
 
     }

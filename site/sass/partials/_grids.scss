@@ -95,3 +95,21 @@ $grid: "grid-";
   width: 100%;
   @include grid;
 }
+
+@media(max-width: 859px) {
+  .row {
+    margin: 0
+  }
+
+  .#{$grid}6,
+  .#{$grid}5,
+  .#{$grid}4 {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .grid-empty {
+    display: none;
+  }
+}

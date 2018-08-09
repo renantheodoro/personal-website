@@ -9,6 +9,7 @@
     overflow: hidden;
     background-color: #253d49;
     box-shadow: 0 1px 7px #c6c6c6;
+    border-radius: 4px;
 
     .img {
       width: 100%;
@@ -28,6 +29,21 @@
         transform: scale(1);
       }
 
+    }
+
+    a {
+      @extend %font_text;
+      @extend %font_normal;
+      color: $yellow;
+      display: block;
+      margin-bottom: 10px;
+      float: left;
+
+      &.first-icon {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #fff;
+      }
     }
 
     &:hover {
@@ -73,6 +89,10 @@
         }
       }
 
+      strong {
+        @extend %font_semibold;
+        color: $yellow
+      }
     }
 
     &:hover {
@@ -81,6 +101,7 @@
         border-color: $yellow
       }
     }
+
 
   }
 }

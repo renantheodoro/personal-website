@@ -10,6 +10,11 @@
   #cont-center {
     width: 160px;
     margin: 0 auto;
+
+    @media(max-width: 859px) {
+      margin: 0
+    }
+
   }
 
   .item-media {

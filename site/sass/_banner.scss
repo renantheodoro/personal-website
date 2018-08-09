@@ -15,12 +15,12 @@
     object-position: center;
   }
 
-  // background: {
-  //   image: url('../images/banner.jpg');
-  //   repeat: no-repeat;
-  //   size: cover;
-  //   position: center top;
-  // }
+  background: {
+    image: url('../images/banner.jpg');
+    repeat: no-repeat;
+    size: cover;
+    position: center top;
+  }
 
   .container, .row, div[class^="grid-"] {
     height: 100%;
@@ -36,9 +36,14 @@
     text-align: center;
     z-index: 2;
 
+    @media(max-width: 859px) {
+      max-width: 90%;
+    }
+
     h1 {
       color: $white;
       margin-bottom: 45px;
+
 
       big {
         position: relative;
@@ -75,11 +80,19 @@
         &::before {
           content: "<";
           left: -50px;
+
+          @media(max-width: 479px) {
+            display: none;
+          }
         }
 
         &::after {
           content: "/>";
           right: -70px;
+
+          @media(max-width: 479px) {
+            display: none;
+          }
         }
 
       }
