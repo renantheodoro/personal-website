@@ -14,7 +14,7 @@
   .list_boxes {
     width: 100%;
 
-    li {
+    & > .box_item {
       display: table;
       padding-bottom: 40px;
       overflow: hidden;
@@ -69,7 +69,7 @@
           top: 0;
           left: 20px;
           width: 1px;
-          height: 200px;
+          height: 1000px; 
           background-color: #253d49;
         }
 
@@ -80,6 +80,8 @@
         @media(max-width: 479px) {
           display: none;
         }
+
+        
 
       }
 
@@ -170,6 +172,21 @@
 
       @media(max-width: 859px) {
         width: 100%
+      }
+
+      .tools {
+        margin-top: 10px;
+
+        li {
+          display: block;
+          color: $white;
+          line-height: 1.4;
+
+          &::before {
+            content: "-  ";
+            color: $yellow;
+          }
+        }
       }
 
     }
