@@ -1,5 +1,3 @@
-$grid: "grid-";
-
 .container {
   width: 100%;
   max-width: 1120px;
@@ -17,7 +15,14 @@ $grid: "grid-";
   margin: {
     left: -15px;
     right: -15px;
-    // bottom: 20px;
+  }
+}
+
+.row.row--same-height {
+  display: flex;
+
+  [class^="grid"] {
+    flex: 1;
   }
 }
 
@@ -36,64 +41,11 @@ $grid: "grid-";
   }
 }
 
-.#{$grid}1 {
-  width: 8.33333333%;
-  @include grid;
-}
-
-.#{$grid}2 {
-  width: 16.6666667%;
-  @include grid;
-}
-
-.#{$grid}3 {
-  width: 25%;
-  @include grid;
-}
-
-.#{$grid}4 {
-  width: 33.3333333%;
-  @include grid;
-}
-
-.#{$grid}5 {
-  width: 41.6666666%;
-  @include grid;
-}
-
-.#{$grid}6 {
-  width: 50%;
-  @include grid;
-}
-
-.#{$grid}7 {
-  width: 58.3333333%;
-  @include grid;
-}
-
-.#{$grid}8 {
-  width: 66.6666666%;
-  @include grid;
-}
-
-.#{$grid}9 {
-  width: 74.9999999%;
-  @include grid;
-}
-
-.#{$grid}10 {
-  width: 83.3333332%;
-  @include grid;
-}
-
-.#{$grid}11 {
-  width: 91.6666665%;
-  @include grid;
-}
-
-.#{$grid}12 {
-  width: 100%;
-  @include grid;
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    width: $i * 8.33333333%;
+    @include grid;
+  }
 }
 
 @media(max-width: 859px) {
@@ -101,9 +53,9 @@ $grid: "grid-";
     margin: 0
   }
 
-  .#{$grid}6,
-  .#{$grid}5,
-  .#{$grid}4 {
+  .grid-6,
+  .grid-5,
+  .grid-4 {
     width: 100%;
     margin-bottom: 10px;
     padding: 0;
