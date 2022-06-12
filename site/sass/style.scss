@@ -45,10 +45,11 @@ footer {
 }
 
 .section_title {
-  height: 50px;
-  font-size: 28px;
+  font-size: 24px;
+  line-height: 55px;
   @extend %font_regular;
   position: relative;
+  text-transform: uppercase;
 
   &::after {
     content: "";
@@ -57,7 +58,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 75px;
-    height: 2px;
+    height: 3px;
   }
 
   &.b-blue::after {
