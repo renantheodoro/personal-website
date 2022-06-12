@@ -65,20 +65,17 @@
   }
 
   #person {
-    width: 430px;
-    height: 430px;
-    border-radius: 50%;
+    $person-size: 550px;
+    width: $person-size;
+    height: $person-size;
     display: block;
     margin: 0 auto;
-    overflow: hidden;
-    background-color: $blue;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
-      opacity: 0.6;
     }
 
     @media (max-width: 479px) {
