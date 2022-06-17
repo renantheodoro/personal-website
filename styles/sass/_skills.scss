@@ -1,0 +1,90 @@
+#skills {
+  background: {
+    image: url('../../assets/images/bg-skills.jpg');
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+    color: $blue;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .item-skill {
+    width: 100%;
+    display: table;
+    margin-bottom: 25px;
+
+    .skill-title {
+      @extend %font_title;
+      @extend %font_medium;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .level {
+      width: 100%;
+
+      &::after {
+        @extend %font_title;
+        color: $white;
+        width: 60px;
+        float: right;
+        text-align: right;
+        margin-top: -6px;
+      }
+
+      .bar {
+        width: calc(100% - 60px);
+        height: 3px;
+        float: left;
+        background-color: #babec0;
+
+        &-filled {
+          height: 100%;
+          background-color: $yellow;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -6px;
+            right: -15px;
+            border-radius: 50px;
+            background-color: $yellow
+          }
+        }
+
+      }
+
+      @for $i from 1 through 10{
+        $level: $i * 10;
+
+        &.level-#{$level} {
+          &::after {
+            content: "#{$level}%";
+          }
+
+          .bar-filled {
+            width: $level * 1%;
+          }
+        }
+      }
+
+      &.level-99 {
+        &::after {
+          content: "99%";
+        }
+        .bar-filled {
+          width: 99%;
+        }
+      }
+
+    }
+  }
+}

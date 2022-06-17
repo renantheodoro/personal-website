@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 1239px) {
+    width: 90%;
+  }
+
+}
+
+.row {
+  width: 100%;
+  display: table;
+  margin: {
+    left: -15px;
+    right: -15px;
+  }
+}
+
+.row.row--same-height {
+  display: flex;
+
+  [class^="grid"] {
+    flex: 1;
+  }
+}
+
+@mixin grid {
+  padding: 0 15px;
+  margin-left: auto;
+  float: left;
+  min-height: 1px;
+
+  &:first-child {
+    padding-left: 0
+  }
+
+  &:last-child {
+    padding-right: 0
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    width: $i * 8.33333333%;
+    @include grid;
+  }
+}
+
+@media(max-width: 859px) {
+  .row {
+    margin: 0
+  }
+
+  .grid-6,
+  .grid-5,
+  .grid-4 {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .grid-empty {
+    display: none;
+  }
+}

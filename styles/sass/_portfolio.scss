@@ -1,0 +1,104 @@
+#portfolio {
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .port_box {
+    width: 100%;
+    overflow: hidden;
+    background-color: #253d49;
+    box-shadow: 0 1px 7px #c6c6c6;
+    border-radius: 4px;
+
+    .img {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object: {
+          fit: cover;
+          position: center;
+        }
+        transition: ease .8s;
+        transform: scale(1);
+      }
+
+    }
+
+    a {
+      @extend %font_text;
+      @extend %font_normal;
+      color: $yellow;
+      display: block;
+      margin-bottom: 10px;
+      float: left;
+
+      &.first-icon {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #fff;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
+    &-content {
+      padding: 15px;
+      padding-bottom: 30px;
+
+      h3 {
+        @extend %font_title;
+        @extend %font_regular;
+        font-size: 22px;
+        color: $white;
+        margin-bottom: 10px;
+      }
+
+      p {
+        @extend %font_text;
+        @extend %font_normal;
+        font-size: 16px;
+        color: $whiteDark;
+        line-height: 20px;
+        margin-bottom: 25px;
+      }
+
+      span {
+        @extend %font_text;
+        @extend %font_light;
+        font-size: 14px;
+        color: $white;
+        transition: ease .8s;
+        border-bottom: 1px solid $white;
+        display: inline;
+        padding-bottom: 4px;
+
+        &::after {
+          content: "  >";
+        }
+      }
+
+      strong {
+        @extend %font_semibold;
+        color: $yellow
+      }
+    }
+
+    &:hover {
+      span {
+        color: $yellow;
+        border-color: $yellow
+      }
+    }
+
+
+  }
+}

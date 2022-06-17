@@ -1,0 +1,40 @@
+@font-face{
+  font-family: 'dosis';
+  src: url('../../assets/fonts/Dosis-Bold.ttf');
+  src: url('../../assets/fonts/Dosis-ExtraBold.ttf');
+  src: url('../../assets/fonts/Dosis-ExtraLight.ttf');
+  src: url('../../assets/fonts/Dosis-Light.ttf');
+  src: url('../../assets/fonts/Dosis-Medium.ttf');
+  src: url('../../assets/fonts/Dosis-Regular.ttf');
+  src: url('../../assets/fonts/Dosis-Semi-Bold.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+%font_title {
+  font-family: 'dosis', sans-serif;
+}
+
+%font_text {
+  font-family: 'Roboto', sans-serif;
+}
+
+%font_light {
+  font-weight: 300;
+}
+
+%font_normal {
+  font-weight: 400;
+}
+
+%font_medium {
+  font-weight: 500;
+}
+
+%font_regular {
+  font-weight: 600;
+}
+
+%font_semibold {
+  font-weight: 700;
+}

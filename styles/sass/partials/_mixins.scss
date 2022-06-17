@@ -1,0 +1,17 @@
+@mixin border {
+  border: {
+    style: solid;
+    width: 2px;
+    color: $blue;
+    radius: 50%;
+  }
+}
+
+@mixin no-border {
+  border: {
+    style: solid;
+    width: 0px;
+    color: transparent;
+    radius: 50%;
+  }
+}
