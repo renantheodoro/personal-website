@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding-bottom: 36px;
 
-    @media(max-width: 859px) {
+    @media screen and (max-width: breakpoint('tablet')) {
       margin: 0
     }
 

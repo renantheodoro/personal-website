@@ -36,7 +36,7 @@
     text-align: center;
     z-index: 2;
 
-    @media (max-width: 859px) {
+    @media screen and (max-width: breakpoint('tablet')) {
       max-width: 90%;
     }
 

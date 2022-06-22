@@ -49,20 +49,24 @@
   }
 }
 
-@media(max-width: 859px) {
-  .row {
-    margin: 0
+.row {
+  @media (max-width: breakpoint('desktop')) {
+    margin: 0;
   }
+}
 
-  .grid-6,
-  .grid-5,
-  .grid-4 {
+.grid-6,
+.grid-5,
+.grid-4 {
+  @media (max-width: breakpoint('desktop')) {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     padding: 0;
   }
+}
 
-  .grid-empty {
+.grid-empty {
+  @media (max-width: breakpoint('desktop')) {
     display: none;
   }
 }
