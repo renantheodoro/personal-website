@@ -38,3 +38,17 @@
 %font_semibold {
   font-weight: 700;
 }
+
+h1, h2, h3, h4, h5 {
+  @extend %font_title;
+
+  &>big {
+    @extend %font_title;
+  }
+}
+
+p, li, span {
+  @extend %font_text;
+}
+
+
