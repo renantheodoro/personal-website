@@ -24,6 +24,13 @@
     }
   }
 
+  &>.container>.row {
+    @media screen and (max-width: breakpoint('desktop')) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   #details {
     width: 100%;
     max-width: 340px;
@@ -65,29 +72,29 @@
   }
 
   #person {
-    $person-size: 550px;
-    width: $person-size;
-    height: $person-size;
-    display: block;
-    margin: 0 auto;
+    max-width: 430px;
+    width: 100%;
+    margin-bottom: 1rem;
 
     img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
+      height: auto;
     }
 
-    @media (max-width: 479px) {
-      max-width: 430px;
-      height: 0;
-      width: 100%;
-      padding-bottom: 100%;
+    @media screen and (min-width: breakpoint('tablet')) {
+      $person-size: 550px;
 
+      width: $person-size;
+      height: $person-size;
+      display: block;
+      margin: 0 auto;
+  
       img {
         width: 100%;
-        height: auto;
-      }
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }  
     }
   }
 }
