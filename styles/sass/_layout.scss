@@ -6,7 +6,13 @@ footer {
   }
 
   &.section--height-100vh {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+    @media screen and (min-width: breakpoint('tablet')) {
+        height: 100vh;
+    }
   }
 }
 

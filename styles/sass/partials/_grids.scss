@@ -6,7 +6,6 @@
   @media (max-width: 1239px) {
     width: 90%;
   }
-
 }
 
 .row {
@@ -19,7 +18,9 @@
 }
 
 .row.row--same-height {
-  display: flex;
+  @media screen and (min-width: breakpoint('tablet')) {
+    display: flex;
+  }
 
   [class^="grid"] {
     flex: 1;
