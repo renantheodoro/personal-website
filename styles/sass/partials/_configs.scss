@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@function _im-to-em($breakpoints, $base-value: 16px) {
+    $new-breakpoints: ();
+
+    @each $name, $value in $breakpoints {
+        $em-value: math.div($value, $base-value) * 1em;
+        $new-breakpoints: map-merge(
+            $new-breakpoints,
+            (
+                $name: $em-value,
+            )
+        );
+    }
+
+    @return $new-breakpoints;
+}
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: _im-to-em(
+    (
+        'phone': 320px,
+        'max-phablet': 479px,
+        'phablet': 480px,
+        'max-tablet': 767px,
+        'tablet': 768px,
+        'max-desktop': 1023px,
+        'desktop': 1024px,
+        'tablet-portrait': 1366px,
+        'wide': 1440px,
+    )
+) !default;
+
+$toggle-breakpoints: (
+    'toggle-table-layout': 48em,
+    'toggle-menu': 64em,
+);
