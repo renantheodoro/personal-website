@@ -1,15 +1,16 @@
-@import "partials/configs",
+@import 
+        "partials/functions",
         "partials/reset",
         "partials/colors",
         "partials/fonts",
         "partials/mixins",
         "partials/grids",
         "partials/helpers",
+        "partials/layout",
         "banner",
         "about",
         "experience",
         "skills",
         "portfolio",
-        "layout",
         "footer"
 ;

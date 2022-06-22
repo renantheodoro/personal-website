@@ -1,0 +1,24 @@
+@function breakpoint($breakpoint: null) {
+    $default-breakpoints: (
+        'phone': 20em,
+        // 320px,
+        'tablet': 48em,
+        // 768px,
+        'desktop': 64em,
+        // 1024px,
+    );
+
+    @if $breakpoint == null {
+        @error 'A breakpoint name is required. Availabe values-> `#{map-keys($default-breakpoints)}`';
+    }
+
+    @if variable-exists('breakpoints') and type-of($breakpoints) == 'map' {
+        $default-breakpoints: map-merge($default-breakpoints, $breakpoints);
+    }
+
+    @if not map-has-key($default-breakpoints, $breakpoint) {
+        @error 'unknown value sent to `breakpoint` function-> #{$breakpoint}. Availabe values-> `#{map-keys($default-breakpoints)}`';
+    }
+
+    @return map-get($default-breakpoints, $breakpoint);
+}
